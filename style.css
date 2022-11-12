@@ -3,10 +3,18 @@
     align-items: center;
     background-size: contain;
     background-image: url("images/boston.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 .material_box{
-    border: 2px solid rgb(154, 154, 154);
+    border: 2px solid rgb(232 232 232);
     border-radius: 5px;
-    background-color: rgba(167, 167, 167, 0.267)
+    background-color: rgb(196 196 196 / 27%);
+    box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
+    padding: 10px;
+    margin: 30px;
 }
