@@ -1,16 +1,17 @@
 // Basically main function
 function calculate_carbon() {
-    const forms = get_element('material_forms').children;
-    if(forms.length == 0)
+    const form_count = get_element('material_forms').children.length;
+    if(form_count == 0)
         return;
     let total_carbon = 0;
-    for(let i = 0; i < forms.length; i++) {
+    for(let i = 0; i < form_count; i++) {
         // Each form is in a styling div, so we get the first child
-        const form = forms[i].children[0].children[0];
+        const form = get_element('form' + i);
 
         const carbon_factor_str = form['carbon_factor'].value;
         const mass_str = form['mass'].value;
-        if(carbon_factor_str === '' || mass_str === '')
+        if(form['carbon_factor'] === undefined || carbon_factor_str === ''
+            || form['mass'] === undefined || mass_str === '')
             return;
         const carbon_factor = parseFloat(carbon_factor_str);
         const mass = parseFloat(mass_str);
@@ -33,26 +34,37 @@ function add_material() {
 
 // Returns the material form made
 function new_material_form() {
-    let new_material_form = document.createElement('div');
-    new_material_form.innerHTML = `
-        <div class="material_box">
-            <form id="form` + get_element('material_forms').children.length + `">
-                Material Name: <input type="text" onclick="calculate_carbon()"><br>
-                Carbon factor (kg<sub>CO<sub>2</sub></sub>e / kg<sub>material</sub>): <input type="text" name="carbon_factor" onclick="calculate_carbon()"><br>
-                Mass (kg): <input type="text" name="mass" onclick="calculate_carbon()"><br><br>
-            </form>
-        </div>`;
+    const form_number = get_element('material_forms').children.length;
+    console.log('form number is ' + form_number)
+    const new_material_form = document.createElement('div');
+    new_material_form.setAttribute('id', 'box' + form_number);
+    new_material_form.setAttribute('class', 'material_box');
+
+    console.log(new_material_form);
+
+    const form_element = create_element(`
+        <form id="form` + form_number + `">
+            Material Name: <input type="text" onclick="calculate_carbon()"><br>
+            Carbon factor (kg<sub>CO<sub>2</sub></sub>e / kg<sub>material</sub>): <input type="text" name="carbon_factor" onclick="calculate_carbon()"><br>
+            Mass (kg): <input type="text" name="mass" onclick="calculate_carbon()"><br><br>
+        </form>`);
+    new_material_form.appendChild(form_element);
+
+    const remove_button = remove_button_for('box' + form_number);
+    new_material_form.appendChild(remove_button);
+
     return new_material_form;
 }
-
-add_material();
 
 // Helper functions
 
 function remove_button_for(element_id) {
-    let new_button = document.createElement('input');
-    new_button.innerHTML = `<input type="button" onclick="get_element('` + element_id + `')>`;
-    return new_button;
+    return create_element(`
+        <input
+            type="button"
+            id="remove_`+ element_id + `"
+            onclick="get_element('` + element_id + `').remove()"
+        >`);
 }
 
 function create_element(str) {
@@ -67,8 +79,9 @@ function create_element(str) {
     return frag;
 }
 
-function get_element(element) {
-    return document.getElementById(element);
+function get_element(element_str) {
+    if(element_str != '')
+        return document.getElementById(element_str);
 }
 
 /*
@@ -76,3 +89,7 @@ function get_material(): string {
     let material: HTMLElement = document.getElementById("inptMat")!;
     return material.onsubmit();
 }*/
+
+
+
+add_material();
