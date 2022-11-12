@@ -5,7 +5,7 @@ body {
     background-color: #0b2027;
 }
 
-button {
+input[type=button] {
     background-color: #70A9A1; /* Green */
     border-radius: 5px;
     border: none;
@@ -15,6 +15,10 @@ button {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+}
+
+.calculator {
+    margin: 5px;
 }
 
 .homepage {
@@ -33,7 +37,13 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: #F6F1D1;
+    text-shadow: 2px 2px #40798C;
+}
+
+.homepage {
+    background-color: #70A9A1;
+    height: 100vh;
 }
 
 .material_box{
