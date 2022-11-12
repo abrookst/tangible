@@ -7,3 +7,6 @@ Ali Brooks, Siyan Zuhayer, and Chloe MacGregor.
 
 # What is the project?
 It's a calculator that automates the calculations required to find the embodied carbon of building materials.
+
+# Central tenet:
+    mass (kg), material (string) -> embodied carbon (kg)
