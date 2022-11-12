@@ -17,7 +17,7 @@ input[type=button] {
     font-size: 16px;
 }
 
-.calculator {
+#calculator {
     margin: 5px;
 }
 
@@ -38,10 +38,10 @@ input[type=button] {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #F6F1D1;
-    text-shadow: 2px 2px #40798C;
 }
 
-.homepage {
+.about_us {
+    margin: 5px;
     background-color: #70A9A1;
     height: 100vh;
 }
