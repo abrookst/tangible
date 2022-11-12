@@ -64,6 +64,7 @@ function remove_button_for(element_id) {
             type="button"
             id="remove_`+ element_id + `"
             onclick="get_element('` + element_id + `').remove()"
+            value="Remove material"
         >`);
 }
 
