@@ -1,1 +1,17 @@
-<p>test</p>
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Enter a specific material and its properties down below:</p>
+
+<form id="frm1" action="/action_page.php">
+  Material Name: <input type="text" name="mname"><br>
+  Quantity (kg): <input type="text" name="quantity"><br><br>
+  Carbon Factor of material (kg<sub>CO<sub>2</sub></sub> / kg<sub>material</sub>): <input type="text" name="carbon"><br><br>
+  <input type="button" onclick="get_material()" value="Calculate">
+</form>
+
+<script src="calculate.ts"></script>
+
+</body>
+</html>
