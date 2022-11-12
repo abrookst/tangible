@@ -2,7 +2,7 @@
     justify-content: center;
     align-items: center;
     background-size: contain;
-    background-image: url("/boston.jpg");
+    background-image: url("images/boston.jpg");
 }
 
 .material_box{
