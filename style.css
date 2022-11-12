@@ -4,3 +4,9 @@
     background-size: contain;
     background-image: url("/boston.jpg");
 }
+
+.material_box{
+    border: 2px solid rgb(154, 154, 154);
+    border-radius: 5px;
+    background-color: rgba(167, 167, 167, 0.267)
+}
