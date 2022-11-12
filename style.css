@@ -6,7 +6,7 @@ body {
 }
 
 input[type=button] {
-    background-color: #753742; /* Green */
+    background-color: #753742;
     border-radius: 5px;
     border: none;
     color: #F6F1D1;
@@ -41,7 +41,7 @@ input[type=button] {
 }
 
 .about_us {
-    margin: 5px;
+    padding: 5px;
     background-color: #70A9A1;
     height: 100vh;
 }
