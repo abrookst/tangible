@@ -42,14 +42,14 @@ input[type=button] {
 
 .about_us {
     padding: 5px;
-    background-color: #70A9A1;
+    background-color: #336373;
     height: 100vh;
 }
 
 .material_box{
     border: none;
     border-radius: 5px;
-    background-color: #40798C;
+    background-color: #193741;
     box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
     padding: 10px;
     margin: 30px;
