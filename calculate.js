@@ -4,7 +4,8 @@ function calculate_carbon() {
     let carbon_factor = parseFloat(form['carbon_factor'].value);
     let mass = parseFloat(form['mass'].value);
     let embodied_carbon = embodied_carbon_of(carbon_factor, mass);
-    get_element('embodied_carbon').innerHTML = embodied_carbon;
+    get_element('embodied_carbon').innerHTML =
+        '<b>' + embodied_carbon + '</b>kg of CO<sub>2</sub> embodied';
 }
 
 // Returns kg of CO2
