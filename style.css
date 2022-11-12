@@ -6,7 +6,7 @@ body {
 }
 
 input[type=button] {
-    background-color: #70A9A1; /* Green */
+    background-color: #753742; /* Green */
     border-radius: 5px;
     border: none;
     color: #F6F1D1;
@@ -47,9 +47,9 @@ input[type=button] {
 }
 
 .material_box{
-    border: 2px solid rgb(232 232 232);
+    border: none;
     border-radius: 5px;
-    background-color: rgb(196 196 196 / 27%);
+    background-color: #40798C;
     box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
     padding: 10px;
     margin: 30px;
