@@ -46,6 +46,7 @@ input[type=button] {
     padding: 10px;
     background-color: #336373;
     height: 100vh;
+    text-align: center;
 }
 
 div#material_forms {
