@@ -1,3 +1,4 @@
+console.log('test');
 // Basically main function
 function calculate_carbon() {
     const form_count = get_element('material_forms').children.length;
@@ -20,7 +21,7 @@ function calculate_carbon() {
 
     get_element('embodied_carbon').innerHTML =
         '<b>' + total_carbon + '</b> kg of CO<sub>2</sub> embodied';
-}               
+}
 
 // Returns kg of CO2
 function embodied_carbon_of(carbon_factor, mass) {
@@ -84,13 +85,5 @@ function get_element(element_str) {
     if(element_str != '')
         return document.getElementById(element_str);
 }
-
-/*
-function get_material(): string {
-    let material: HTMLElement = document.getElementById("inptMat")!;
-    return material.onsubmit();
-}*/
-
-
 
 add_material();
