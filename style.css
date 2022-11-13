@@ -38,6 +38,8 @@ input[type=button] {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #F6F1D1;
+    font-size: 50px;
+    text-shadow: 2px 2px #c33c54;
 }
 
 .about_us {
